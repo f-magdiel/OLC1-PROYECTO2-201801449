@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+textarea{
+background: url(http://i.imgur.com/2cOaJ.png);
+background-attachment: local;
+background-repeat: no-repeat;
+border-color: blue;
+padding-left: 50px;
+padding-top: 10px;
+border-color:rgb(53, 128, 185);
+font-family: 'courier new';
+}
+
+label{
+  color:rgb(20, 20, 20);
+  font-size: 20px;
+  font-family:'Helvetica';
+  
+}
