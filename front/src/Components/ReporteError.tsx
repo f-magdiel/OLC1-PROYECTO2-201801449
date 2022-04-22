@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Reportes(){
+function ReporteError(){
     return(
-        <h1>Reportes</h1>
+        <h1>Reporte Error</h1>
     );
 }
 
-export default Reportes;
+export default ReporteError;

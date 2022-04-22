@@ -1,4 +1,4 @@
-import React,{ChangeEvent,ChangeEventHandler,useState} from 'react';
+import React,{ChangeEvent,ChangeEventHandler,useEffect,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Form,Button} from 'react-bootstrap'
 import axios from 'axios'
@@ -12,7 +12,7 @@ function Compilador(){
     });
 
     const [dato1,setDato1]=useState({
-        exp1:""
+        res:""
     });
 
     const [respuesta,setRespuesta] = useState({
@@ -30,8 +30,11 @@ function Compilador(){
     const handleOutputChange = ({
         target:{name,value},
     }:ChangeEvent<HTMLTextAreaElement>)=>{
-        setDato1({exp1:respuesta.resultado})
+        setDato1({res:respuesta.resultado})
     }
+
+
+   
 
     //enviar datos al backend
     const sendData = async()=>{
@@ -46,7 +49,7 @@ function Compilador(){
         respuesta.errores = res.data.errores
         respuesta.resultado = res.data.resultado
         respuesta.tabla = res.data.tabla
-        
+        setDato1({res:respuesta.resultado})
     }
 
 
@@ -72,11 +75,11 @@ function Compilador(){
             <div>
             <label>Área de Consola</label>
             <textarea
-            name="exp"
+            name="res"
             rows={10} 
             cols={222}
             onChange={handleOutputChange}
-            value={dato1.exp1}
+            value={dato1.res}
             >
 
             </textarea>

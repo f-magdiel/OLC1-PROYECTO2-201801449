@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Nav,Navbar,Container,NavDropdown,Card} from 'react-bootstrap'
 import Home from "./Components/Home"
 import Compilador from "./Components/Compilador"
-import Reportes from "./Components/Reportes"
+import ReporteError from "./Components/ReporteError"
+import ReporteAST from "./Components/ReporteAST"
 import {
     BrowserRouter as Router,
     Route,
@@ -23,7 +24,8 @@ function App() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Nav.Link as={Link} to ={"/compilador"} >Compilador</Nav.Link>
-        <Nav.Link as={Link} to ={"/reportes"}>Reportes</Nav.Link>
+        <Nav.Link as={Link} to ={"/reporteError"}>Reporte Error</Nav.Link>
+        <Nav.Link as={Link} to = {"/reporteAST"}>Reporte AST</Nav.Link>
         
       </Nav>
     </Navbar.Collapse>
@@ -37,7 +39,8 @@ function App() {
   <Route path="/" element={<Home/>}/>
   <Route path="/home" element={<Home/>}/>
   <Route path="/compilador" element={<Compilador/>}/>
-  <Route path="/reportes" element={<Reportes/>}/>
+  <Route path="/reporteError" element={<ReporteError/>}/>
+  <Route path="/reporteAST" element={<ReporteAST/>}/>
 </Routes>
 </div>
 </Router>
