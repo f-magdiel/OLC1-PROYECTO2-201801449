@@ -4,14 +4,23 @@ import {Card,CardImg,Button} from 'react-bootstrap'
 function Home(){
     return(
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}} >
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
+        <Card border="dark" style={{ width: '50rem' }}>
+        
+        <Card.Body >
           <Card.Title>Compscript</Card.Title>
+         
           <Card.Text>
-            Este es el segundo proyecto de Organizacion y Compiladores 1
+            FACULTAD DE INGERIERÍA
           </Card.Text>
-          <Button variant="primary">Ir al Compilador</Button>
+          <Card.Text>
+            UNIVERSIDAD DE SAN CARLOS DE GUATEMALA
+          </Card.Text>
+          <Card.Text>
+           SEGUNDO PROYECTO DE ORGANIZACION Y COMPILADORES 1
+          </Card.Text>
+          <Card.Text>
+            PRIMER SEMESTRE 2022
+          </Card.Text>
         </Card.Body>
       </Card>
         </div>
