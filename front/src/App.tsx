@@ -5,6 +5,8 @@ import Home from "./Components/Home"
 import Compilador from "./Components/Compilador"
 import ReporteError from "./Components/ReporteError"
 import ReporteAST from "./Components/ReporteAST"
+import Tabla from "./Components/TablaSimbolo"
+
 import {
     BrowserRouter as Router,
     Route,
@@ -26,7 +28,7 @@ function App() {
         <Nav.Link as={Link} to ={"/compilador"} >Compilador</Nav.Link>
         <Nav.Link as={Link} to ={"/reporteError"}>Reporte Error</Nav.Link>
         <Nav.Link as={Link} to = {"/reporteAST"}>Reporte AST</Nav.Link>
-        
+        <Nav.Link as={Link} to = {"/tablasimbolo"}>Tabla Simbolo</Nav.Link>
       </Nav>
     </Navbar.Collapse>
     
@@ -41,6 +43,7 @@ function App() {
   <Route path="/compilador" element={<Compilador/>}/>
   <Route path="/reporteError" element={<ReporteError/>}/>
   <Route path="/reporteAST" element={<ReporteAST/>}/>
+  <Route path="/tablasimbolo" element={<Tabla/>}/>
 </Routes>
 </div>
 </Router>

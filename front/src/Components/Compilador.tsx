@@ -69,7 +69,7 @@ function Compilador(){
             </div>
             
             <div>
-            <Button onClick={sendData} variant="primary">Analizar Código</Button>
+            <Button name="btn" onClick={sendData} variant="dark">Analizar Código</Button>
             </div>
 
             <div>
