@@ -36,12 +36,12 @@ function TablaSimbolo(){
           <tr>
               <td>1</td>
               <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
-              <td>{tab.linea}</td>
+              <td>{tab.columna}</td>
+              <td>{tab.entorno}</td>
+              <td>{tab.forma}</td>
+              <td>{tab.identificador}</td>
+              <td>{tab.tipo}</td>
+              <td>{tab.valor}</td>
           </tr>
         ))
        
