@@ -37,3 +37,10 @@ label{
   margin-bottom: 1%;
   
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:scroll
+}
