@@ -9,7 +9,7 @@ function TablaSimbolo(){
     const consultaTabla = async()=>{
       const res = await axios.get('http://localhost:5000/consultatable')
       setTabSym(res.data.tabla)
-      console.log(tabsym)
+      console.log(res.data.tala)
     }
     return(
       <div>
@@ -22,26 +22,27 @@ function TablaSimbolo(){
       <th>No</th>
       <th>Línea</th>
       <th>Columna</th>
-      <th>Entorno</th>
-      <th>Forma</th>
+      <th>Ambito</th>
+      <th>Tipo de Dato</th>
       <th>Identificador</th>
-      <th>Tipo</th>
+      <th>Tipo de Método</th>
       <th>Valor</th>
 
     </tr>
   </thead>
   <tbody>
       {
-        tabsym.map(tab=>(
+        tabsym.map((tab,index)=>(
+          
           <tr>
               <td>1</td>
-              <td>{tab.linea}</td>
-              <td>{tab.columna}</td>
-              <td>{tab.entorno}</td>
-              <td>{tab.forma}</td>
-              <td>{tab.identificador}</td>
-              <td>{tab.tipo}</td>
-              <td>{tab.valor}</td>
+              <td key={index}>{tab.linea}</td>
+              <td key={index}>{tab.columna}</td>
+              <td key={index}>{tab.entorno}</td>
+              <td key={index}>{tab.forma}</td>
+              <td key={index}>{tab.identificador}</td>
+              <td key={index}>{tab.tipo}</td>
+              <td key={index}>{tab.valor}</td>
           </tr>
         ))
        

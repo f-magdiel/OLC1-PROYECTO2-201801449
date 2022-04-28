@@ -26,10 +26,6 @@ let cuerpo: string;
 
 class IndexController {
   
-/* 
-  public index(req: Request, res: Response) {
-    res.json({ text: 'Hola bbsitas' });
-  } */
 
   //metodo para analizar todo el codigo ingresado y responder con un respuesta
   //para realizar peticiones al backend
@@ -91,7 +87,9 @@ class IndexController {
         }
       }
       arbolNuevo = ast;
+      tablaSym.length = 0 // lo vacio
      for (let i of ast.getSimbolos()){
+       console.log("tabla")
        console.log(i)
        tablaSym.push(i)
      }
@@ -121,6 +119,7 @@ class IndexController {
 
   //metodo para deolver el array de errores cuando se hace la peticion desde el front
   public consultaerror(req:Request,res:Response){
+    
     return res.send({
       errores: listaErrores
     })
@@ -128,6 +127,7 @@ class IndexController {
  
   //meotodo para devolver el array de tabla de simbolos cuando se hace la peticion desde el front
   public consultatabla(req:Request,res:Response){
+
     return res.send({
       tabla: tablaSym
     })

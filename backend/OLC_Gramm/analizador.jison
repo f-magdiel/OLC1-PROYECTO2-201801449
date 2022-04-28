@@ -371,6 +371,10 @@ METODOS:
     IDENTIFICADOR PARABRE PARAMETROS PARCIERRA DOSPUNTOS RESVOID BLOQUEINSTRUCCION  {$$=new metodos.default(new Tipo.default(Tipo.tipoDato.VOID),@1.first_line,@1.first_column,$1,$3,$7);}
     //|RESVOID IDENTIFICADOR PARABRE PARCIERRA BLOQUEINSTRUCCION           {$$=new metodos.default(new Tipo.default(Tipo.tipoDato.VOID),@1.first_line,@1.first_column,$2,[],$5);}
     |IDENTIFICADOR PARABRE PARCIERRA DOSPUNTOS RESVOID BLOQUEINSTRUCCION            {$$=new metodos.default(new Tipo.default(Tipo.tipoDato.VOID),@1.first_line,@1.first_column,$1,[],$6);}
+    
+    |IDENTIFICADOR PARABRE PARAMETROS PARCIERRA BLOQUEINSTRUCCION                   {$$=new metodos.default(new Tipo.default(Tipo.tipoDato.VOID),@1.first_line,@1.first_column,$1,$3,$5);}
+    
+    |IDENTIFICADOR PARABRE PARCIERRA BLOQUEINSTRUCCION                              {$$=new metodos.default(new Tipo.default(Tipo.tipoDato.VOID),@1.first_line,@1.first_column,$1,[],$4);}
     ;
 PARAMETROS:
     PARAMETROS COMA TIPODATO IDENTIFICADOR    {$1.push({tipato:$3,identificador:$4});$$=$1;} 

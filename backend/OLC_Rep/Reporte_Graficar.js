@@ -14,8 +14,8 @@ function graficarArbol(arbolitos) {
       n0[label="${arbolitos.getValor().replace('"', '\\"')}"];
       ${cuerpo}
     }`;
-    fs.writeFile('reporteAST.dot', principal, () => { }); // escribe el archivo .dot para graficar
-    (0, child_process_1.exec)('dot -Tsvg reporteAST.dot -o reporteAST.svg', (error, stdout, stderr) => {
+    fs.writeFile('../front/src/assets/img/reporteAST.dot', principal, () => { }); // escribe el archivo .dot para graficar
+    (0, child_process_1.exec)('dot -Tsvg ../front/src/assets/img/reporteAST.dot -o ../front/src/assets/img/reporteAST.svg', (error, stdout, stderr) => {
         if (error) {
             return;
         }

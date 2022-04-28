@@ -25,10 +25,6 @@ let arbolNuevo;
 let contador;
 let cuerpo;
 class IndexController {
-    /*
-      public index(req: Request, res: Response) {
-        res.json({ text: 'Hola bbsitas' });
-      } */
     //metodo para analizar todo el codigo ingresado y responder con un respuesta
     //para realizar peticiones al backend
     interpretar(req, res) {
@@ -80,7 +76,9 @@ class IndexController {
             }
         }
         arbolNuevo = ast;
+        tablaSym.length = 0; // lo vacio
         for (let i of ast.getSimbolos()) {
+            console.log("tabla");
             console.log(i);
             tablaSym.push(i);
         }
