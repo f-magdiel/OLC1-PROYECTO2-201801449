@@ -89,8 +89,8 @@ class IndexController {
       arbolNuevo = ast;
       tablaSym.length = 0 // lo vacio
      for (let i of ast.getSimbolos()){
-       console.log("tabla")
-       console.log(i)
+       //console.log("tabla")
+       //console.log(i)
        tablaSym.push(i)
      }
      // retorno el resultado, array de errores y de simbolos
