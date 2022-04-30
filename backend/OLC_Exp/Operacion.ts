@@ -528,7 +528,7 @@ export default class Operacion extends Instruccion {
           op2 //OPERADOR 2
         ) {
           case tipoDato.ENTERO: //retorna entero
-            this.tipoDato = new Tipo(tipoDato.DECIMAL);
+            this.tipoDato = new Tipo(tipoDato.ENTERO);
             return der != 0
               ? parseInt(izq) / parseInt(der)
               : 'NO SE PUEDE DIVIDIR SOBRE CERO';

@@ -478,7 +478,7 @@ class Operacion extends Instruccion_1.Instruccion {
             switch (op2 //OPERADOR 2
             ) {
                 case Simbolo_Tipo_1.tipoDato.ENTERO: //retorna entero
-                    this.tipoDato = new Simbolo_Tipo_1.default(Simbolo_Tipo_1.tipoDato.DECIMAL);
+                    this.tipoDato = new Simbolo_Tipo_1.default(Simbolo_Tipo_1.tipoDato.ENTERO);
                     return der != 0
                         ? parseInt(izq) / parseInt(der)
                         : 'NO SE PUEDE DIVIDIR SOBRE CERO';
